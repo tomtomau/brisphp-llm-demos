@@ -21,10 +21,14 @@ const categories = Object.values(Categories).map((c) => c.toString()).join('\n')
 
 const prompt = ChatPromptTemplate.fromMessages([
     ['system', `When the human provides the name of the recipe, you must classify it into one of the following categories: \n${categories}`],
-    ['human', `Coconut Prawns with Crushed Chickpeas & Basil`], // TODO Replace with parameters
+    ['human', `{recipe}`],
 ]);
 
 (async () => {
-    const result = await model.invoke(await prompt.invoke({}));
+    const result = await model.invoke(await prompt.invoke({
+        recipe: 'Coconut Prawns with Crushed Chickpeas & Basil'
+    }));
     console.log({result});
 })();
+
+// TODO: Check Langsmith

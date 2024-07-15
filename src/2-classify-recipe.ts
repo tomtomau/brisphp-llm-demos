@@ -23,3 +23,5 @@ const prompt = ChatPromptTemplate.fromMessages([
     const result = await model.invoke(await prompt.invoke({}));
     console.log({result});
 })();
+
+// TODO: Setup structured output
