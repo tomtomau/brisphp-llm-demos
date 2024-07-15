@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "experiment": "ts-node experiment.ts"
+    "1": "ts-node src/1-hello-world.ts"
   },
   "dependencies": {
     "@langchain/community": "^0.2.18",
