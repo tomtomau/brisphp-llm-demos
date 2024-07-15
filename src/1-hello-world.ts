@@ -2,7 +2,7 @@ import {ChatOpenAI} from "@langchain/openai";
 import dotenv from "dotenv";
 
 dotenv.config({path: '.env'});
-const openAiModel = 'gpt-4o';
+const openAiModel = 'gpt-3.5-turbo';
 
 const model = new ChatOpenAI({
     model: openAiModel,

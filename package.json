@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "1": "ts-node src/1-hello-world.ts"
+    "1": "ts-node src/1-hello-world.ts",
+    "2": "ts-node src/2-classify-recipe.ts"
   },
   "dependencies": {
     "@langchain/community": "^0.2.18",
