@@ -1,12 +1,13 @@
 import express from 'express';
 import {z} from "zod";
 import {CategoriseRecipe} from "./llm-call";
+import {RequestObject} from "./request-object";
 
 const inputSchema = z.object({
     recipe: z.string().describe('The recipe to categorise'),
 });
 
-export const categoriseHandler = async (req: express.Request, res: express.Response) => {
+export const categoriseHandler = async (req: RequestObject, res: express.Response) => {
     const parseResult = inputSchema.safeParse(req.body);
 
     if (!parseResult.success) {
@@ -21,7 +22,11 @@ export const categoriseHandler = async (req: express.Request, res: express.Respo
             recipe
         },
         {
-            runName: 'HTTP /categorise'
+            runName: 'HTTP /categorise',
+            metadata: {
+                requestId: req.requestId
+            },
+            tags: ['API']
         }
     );
 
