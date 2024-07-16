@@ -5,7 +5,8 @@
   "scripts": {
     "1": "ts-node src/1-hello-world.ts",
     "2": "ts-node src/2-classify-recipe.ts",
-    "3": "ts-node src/3-structured-output.ts"
+    "3": "ts-node src/3-structured-output.ts",
+    "4": "ts-node src/4-experiment.ts"
   },
   "dependencies": {
     "@langchain/community": "^0.2.18",
