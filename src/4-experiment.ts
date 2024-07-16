@@ -53,7 +53,7 @@ function correctCategory(rootRun: Run, example?: Example): EvaluationResult {
 
 (async () => {
     await evaluate(RunnableSequence.from([prompt, model]), {
-        data: 'brisphp-llm-demo-prep',
+        data: '', // TODO: Upload a real dataset to langsmith and put name here
         metadata: {
             model: openAiModel,
         },
