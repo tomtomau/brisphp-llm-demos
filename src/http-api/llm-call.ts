@@ -1,8 +1,10 @@
 import {Categories} from "../categories";
 import {ChatPromptTemplate} from "@langchain/core/prompts";
+import {Runnable} from "@langchain/core/runnables";
 import {z} from "zod";
 import {ChatOpenAI} from "@langchain/openai";
 import dotenv from "dotenv";
+
 dotenv.config({path: '.env'});
 
 const categories = Object.values(Categories)
@@ -25,8 +27,4 @@ const model = new ChatOpenAI({
     temperature: 0,
 }).withStructuredOutput(schema);
 
-export async function categoriseRecipe(recipe: string): Promise<string | null>{
-    const response = await model.invoke(await prompt.format({recipe}));
-
-    return response.category;
-}
+export const CategoriseRecipe = prompt.pipe(model);
