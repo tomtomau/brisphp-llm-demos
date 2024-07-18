@@ -12,7 +12,7 @@ const model = new ChatOpenAI({
     temperature: 0,
 });
 
-const categories = Object.values(Categories).map((c) => c.toString()).join('\n');
+const categories = Categories.join('\n');
 
 // TODO: Why are there multiple messages?
 // const prompt = ChatPromptTemplate.fromMessages([

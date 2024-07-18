@@ -1,6 +1,6 @@
 import express from 'express';
 import {z} from "zod";
-import {CategoriseRecipe} from "./llm-call";
+import {CategoriseRecipe} from "./chain";
 import {RequestObject} from "./request-object";
 
 const inputSchema = z.object({

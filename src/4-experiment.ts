@@ -22,8 +22,7 @@ const model = new ChatOpenAI({
     temperature: 0,
 }).withStructuredOutput(schema);
 
-const categories = Object.values(Categories)
-    .map((c) => c.toString())
+const categories = Categories
     // TODO: Does formatting the categories like this help the model?
     // .map((c) => `- ${c}`)
     .join('\n');

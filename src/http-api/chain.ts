@@ -1,14 +1,12 @@
 import {Categories} from "../categories";
 import {ChatPromptTemplate} from "@langchain/core/prompts";
-import {Runnable} from "@langchain/core/runnables";
 import {z} from "zod";
 import {ChatOpenAI} from "@langchain/openai";
 import dotenv from "dotenv";
 
 dotenv.config({path: '.env'});
 
-const categories = Object.values(Categories)
-    .map((c) => c.toString())
+const categories = Categories
     .map((c) => `- ${c}`)
     .join('\n');
 
@@ -27,4 +25,6 @@ const model = new ChatOpenAI({
     temperature: 0,
 }).withStructuredOutput(schema);
 
-export const CategoriseRecipe = prompt.pipe(model);
+const CategoriseRecipe = prompt.pipe(model);
+
+export { schema, CategoriseRecipe };

@@ -1,13 +1,14 @@
 {
   "name": "brisphp-llm-demos",
   "version": "1.0.0",
-  "description": "",
+  "description": "Demo code for explaining how to get started with LLMs",
   "scripts": {
     "1": "ts-node src/1-hello-world.ts",
     "2": "ts-node src/2-classify-recipe.ts",
     "3": "ts-node src/3-structured-output.ts",
     "4": "ts-node src/4-experiment.ts",
-    "5": "ts-node src/5-http-api.ts"
+    "5": "ts-node src/5-http-api.ts",
+    "5-experiment": "ts-node src/http-api/experiment.ts"
   },
   "dependencies": {
     "@langchain/community": "^0.2.18",
@@ -21,8 +22,8 @@
     "uuid": "^10.0.0",
     "zod": "^3.23.8"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Tom Newby",
+  "license": "MIT",
   "devDependencies": {
     "@types/express": "^4.17.21"
   }

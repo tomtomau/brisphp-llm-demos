@@ -17,7 +17,7 @@ const model = new ChatOpenAI({
     temperature: 0,
 }).withStructuredOutput(schema);
 
-const categories = Object.values(Categories).map((c) => c.toString()).join('\n');
+const categories = Categories.join('\n');
 
 const prompt = ChatPromptTemplate.fromMessages([
     ['system', `When the human provides the name of the recipe, you must classify it into one of the following categories: \n${categories}`],
