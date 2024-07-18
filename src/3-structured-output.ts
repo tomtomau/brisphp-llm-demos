@@ -25,10 +25,11 @@ const prompt = ChatPromptTemplate.fromMessages([
 ]);
 
 (async () => {
-    const result = await model.invoke(await prompt.invoke({
+    const result = await prompt.pipe(model).invoke({
         recipe: 'Coconut Prawns with Crushed Chickpeas & Basil'
-    }));
-    console.log({result});
+    });
+
+    console.log(result);
 })();
 
-// TODO: Check Langsmith
+// TODO: Now test with a dataset from LangSmith!

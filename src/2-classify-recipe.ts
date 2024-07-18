@@ -14,14 +14,21 @@ const model = new ChatOpenAI({
 
 const categories = Object.values(Categories).map((c) => c.toString()).join('\n');
 
+// TODO: Why are there multiple messages?
+// const prompt = ChatPromptTemplate.fromMessages([
+//     ['human', `What's the capital of France?`],
+//     ['assistant', `The capital of France is Paris.`],
+//     ['human', `And the name of the big thing?`],
+// ]);
+
 const prompt = ChatPromptTemplate.fromMessages([
     ['system', `When the human provides the name of the recipe, you must classify it into one of the following categories: \n${categories}`],
     ['human', `Coconut Prawns with Crushed Chickpeas & Basil`], // TODO Replace with parameters
 ]);
 
 (async () => {
-    const result = await model.invoke(await prompt.invoke({}));
-    console.log({result});
+    const result = await prompt.pipe(model).invoke({input: 'Chocolate Pudding'});
+    console.log(result.content);
 })();
 
-// TODO: Setup structured output
+// TODO: Next: Setup structured output
