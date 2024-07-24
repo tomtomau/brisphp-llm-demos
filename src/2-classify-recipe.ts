@@ -24,4 +24,5 @@ const prompt = ChatPromptTemplate.fromMessages([
     console.log(result.content);
 })();
 
+// TODO: Did you check LangSmith?
 // TODO: Next: Setup structured output
