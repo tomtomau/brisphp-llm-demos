@@ -54,6 +54,7 @@ Send me a message on [LinkedIn](https://www.linkedin.com/in/tom-newby/) to say G
 
 ## Further resources:
 
+- [Langchain.js docs](https://js.langchain.com/)
 - Unsupervised Learning Podcast:
   - [w/LangChain CEO](https://open.spotify.com/episode/1XUTbCirHDmQ9D5yhWaJhU?si=10d29530c86543a9)
   - [w/Notion AI Engineer Linus Lee](https://open.spotify.com/episode/0GlMttHfQoGMb4w0Fyt5HD?si=b1b33e62f0d742ce)
