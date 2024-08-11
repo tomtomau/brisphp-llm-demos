@@ -23,7 +23,7 @@ const model = new ChatOpenAI({
     model: 'gpt-4o',
     apiKey: process.env.OPENAI_API_KEY,
     temperature: 0,
-}).withStructuredOutput(schema);
+}).withStructuredOutput(schema, { strict: true });
 
 const CategoriseRecipe = prompt.pipe(model);
 

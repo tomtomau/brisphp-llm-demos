@@ -11,12 +11,12 @@
     "5-experiment": "ts-node src/http-api/experiment.ts"
   },
   "dependencies": {
-    "@langchain/community": "^0.2.18",
-    "@langchain/openai": "^0.2.1",
+    "@langchain/community": "^0.2.25",
+    "@langchain/openai": "^0.2.6",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
-    "langchain": "^0.2.5",
-    "langsmith": "^0.1.31",
+    "langchain": "^0.2.13",
+    "langsmith": "^0.1.41",
     "openai": "^4.52.5",
     "ts-node": "^10.9.2",
     "uuid": "^10.0.0",

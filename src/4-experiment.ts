@@ -20,7 +20,7 @@ const model = new ChatOpenAI({
     model: openAiModel,
     apiKey: process.env.OPENAI_API_KEY,
     temperature: 0,
-}).withStructuredOutput(schema);
+}).withStructuredOutput(schema, { strict: true });
 
 const categories = Categories
     // TODO: Does formatting the categories like this help the model?
